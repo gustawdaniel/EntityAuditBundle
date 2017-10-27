@@ -236,6 +236,7 @@ class AuditReader
                 $condition[] = "re.$name = e.$name";
             }
 
+            $columnName = "id";
             $queryBuilder->innerJoin('e', $rootTableName, 're', implode(' AND ', $condition));
         }
 
